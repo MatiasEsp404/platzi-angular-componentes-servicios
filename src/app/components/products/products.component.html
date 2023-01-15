@@ -1,0 +1,23 @@
+<p>
+  Canrtidad de productos en el carrito: {{myShoppingCart.length}}
+</p>
+<p>
+  Total: ${{total}}
+</p>
+<p>Para ver los Pipes: <a href="https://angular.io/api?type=pipe" target="_blank">Pipes</a></p>
+<p>
+  Today: {{today | date:"short"}}
+</p>
+<p>
+  Time ago: {{date | timeAgo}}
+</p>
+<p>
+  Otra fecha: {{date | date:'yyyy.dd.MM'}}
+</p>
+<p>
+  {{'hOLA BasCVASas asASA' | lowercase}}
+</p>
+<div class="products--grid">
+  <app-product style="margin: 10px;" [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
+  </app-product>
+</div>
